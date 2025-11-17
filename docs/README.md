@@ -2,7 +2,7 @@
 ## Multi-Tenant Managed Kubernetes Platform Design Guide
 
 **Last Updated:** 2025-11-17
-**Total Documentation:** ~5,700 lines across 15 documents
+**Total Documentation:** ~5,700 lines across 15 core documents + feature documentation system
 
 ---
 
@@ -56,6 +56,29 @@ Use these for detailed implementation guidance:
 | **[terraform-conversion-strategy.md](./terraform-conversion-strategy.md)** | Terraform modules, working examples | 1,341 |
 
 **Total:** ~4,700 lines
+
+### Platform Research Documents (20-25)
+
+Multi-tenant platform architecture and implementation:
+
+| # | Document | Description | Lines |
+|---|----------|-------------|-------|
+| 20 | **[20-email-infrastructure-postfix-dovecot.md](./20-email-infrastructure-postfix-dovecot.md)** | FREE tier email with Postfix + Dovecot | 1,066 |
+| 21 | **[21-packer-k3s-image-strategy.md](./21-packer-k3s-image-strategy.md)** | Pre-baked images for <3min deployment | 3,075 |
+| 22 | **[22-free-to-premium-migration-automation.md](./22-free-to-premium-migration-automation.md)** | Zero-downtime migration system | 1,740 |
+| 23 | **[23-platform-api-architecture.md](./23-platform-api-architecture.md)** | Node.js + TypeScript REST API | 980 |
+| 24 | **[24-mobile-ux-patterns.md](./24-mobile-ux-patterns.md)** | Mobile-first UX for non-technical users | 615 |
+| 25 | **[25-deployment-system-overview.md](./25-deployment-system-overview.md)** | Complete platform architecture | 682 |
+
+**Total:** ~8,158 lines
+
+### Process & System Documents (30+)
+
+Development processes and workflows:
+
+| # | Document | Description | Lines |
+|---|----------|-------------|-------|
+| 30 | **[30-feature-documentation-system.md](./30-feature-documentation-system.md)** | Feature docs lifecycle (RFCs, ADRs, Features, Guides) | 2,338 |
 
 ---
 
@@ -351,6 +374,83 @@ EOF
 - **API Details:** [provisioning-workflow.md](./provisioning-workflow.md)
 - **Network Details:** [network-architecture.md](./network-architecture.md)
 - **Code Examples:** [terraform-conversion-strategy.md](./terraform-conversion-strategy.md)
+
+---
+
+## 📊 Feature Status Dashboard
+
+Track features in development, testing, and production across FREE, PREMIUM, and Platform tiers:
+
+| Feature | Status | Tier | Target Release | Owner |
+|---------|--------|------|----------------|-------|
+| *No features documented yet* | - | - | - | - |
+
+**[View Full Feature Dashboard →](./features/README.md)**
+
+### Quick Stats
+
+| Tier | Total | Production | In Development |
+|------|-------|------------|----------------|
+| FREE | 0 | 0 | 0 |
+| PREMIUM | 0 | 0 | 0 |
+| Platform | 0 | 0 | 0 |
+
+**Next Step:** Document existing production features (domain management, email accounts, k3s provisioning, etc.)
+
+---
+
+## 🏗️ Architecture Decisions (ADRs)
+
+Document key technical decisions with context, alternatives, and consequences:
+
+| ADR | Decision | Date | Status |
+|-----|----------|------|--------|
+| *No ADRs yet* | - | - | - |
+
+**[View All ADRs →](./adrs/README.md)**
+
+### Suggested Retroactive ADRs
+
+Document decisions from existing architecture:
+- **ADR-001**: Use k3s over k8s for lightweight Kubernetes
+- **ADR-002**: Use PostgreSQL over MySQL for relational database
+- **ADR-003**: Use Argon2id over bcrypt for password hashing
+- **ADR-004**: Use Maildir over mbox for email storage
+
+**[Learn More →](./adrs/README.md)**
+
+---
+
+## 📋 Feature Documentation System
+
+**New in Document 30!** Comprehensive system for documenting features through their lifecycle:
+
+- **[RFCs](./rfcs/README.md)**: Request for Comments for significant features
+- **[ADRs](./adrs/README.md)**: Architecture Decision Records for technical decisions
+- **[Features](./features/README.md)**: Feature documentation (FREE/PREMIUM/Platform)
+- **[Guides](./guides/README.md)**: Implementation and troubleshooting guides
+
+**[Read Document 30: Feature Documentation System →](./30-feature-documentation-system.md)**
+
+### Feature Lifecycle
+
+```
+Idea → RFC → Design (ADRs) → Development → Testing → Deployment → Production
+                                                                        ↓
+                                                                   Deprecated
+```
+
+### Documentation by Stage
+
+| Stage | Badge | Document Type | Example |
+|-------|-------|---------------|---------|
+| Proposal | 📋 DRAFT | RFC | RFC-001-email-quota-enforcement.md |
+| Design | 🎨 DESIGN | ADR | ADR-004-dovecot-maildir-over-mbox.md |
+| Development | 🔨 IN DEVELOPMENT | Feature Doc | FEAT-002-email-accounts.md |
+| Testing | 🧪 TESTING | Feature Doc + Tests | FEAT-102-auto-scaling.md |
+| Production | ✅ PRODUCTION | Feature Doc + Guide | Guide-Managing_Email_Accounts.md |
+
+**[View Complete System →](./30-feature-documentation-system.md)**
 
 ---
 
