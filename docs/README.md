@@ -79,6 +79,9 @@ Development processes and workflows:
 | # | Document | Description | Lines |
 |---|----------|-------------|-------|
 | 30 | **[30-feature-documentation-system.md](./30-feature-documentation-system.md)** | Feature docs lifecycle (RFCs, ADRs, Features, Guides) | 2,338 |
+| 31 | **[31-github-integration-for-features.md](./31-github-integration-for-features.md)** | GitHub Issues, Projects, Discussions, Actions integration | 1,736 |
+
+**Total:** ~4,074 lines
 
 ---
 
