@@ -568,6 +568,12 @@ gh issue create --template adr.yml
 
 ## GitHub Projects for Dashboards
 
+> **⚠️ Important Decision:** Should you use ONE project for all features, or separate projects per tier?
+>
+> **See:** [31-addendum-projects-structure.md](./31-addendum-projects-structure.md) for detailed analysis.
+>
+> **Quick Answer:** Start with **one project with multiple views** (recommended for teams < 15 people). Split later if needed.
+
 ### Create Feature Board
 
 **GitHub Projects (Beta) - Recommended for 2025:**
